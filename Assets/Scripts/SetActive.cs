@@ -15,17 +15,8 @@ public class SetActive : MonoBehaviour
     }
     private void onClick()
     {
-        if (_isshow)
-        {
-            _image.GameObject().SetActive(false);
-            _isshow = false;
-        }
-        else if (!_isshow)
-        {
-            _image.GameObject().SetActive(true);
-            _isshow = true;
-        }
-        
+        _isshow = !_isshow;
+        _image.GameObject().SetActive(_isshow);
     }
 
 }
